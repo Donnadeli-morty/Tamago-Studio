@@ -1,0 +1,507 @@
+{
+  "brand": {
+    "name": "TAMAGO",
+    "instagram": "@tamagofigures",
+    "instagramUrl": "https://www.instagram.com/tamagofigures/",
+    "tagline": "Pequenas ideias, grandes mundos."
+  },
+  "whatsapp": {
+    "phone": "5511999999999",
+    "generic": "Oi! Vim pelo site da TAMAGO e quero saber mais sobre as figures.",
+    "stickyLabel": "Pedir no WhatsApp",
+    "nameOnBase": "Nome na base: {nomeBase}",
+    "notFound": "Oi! Procuro uma figure que não achei no catálogo do site: "
+  },
+  "status": {
+    "disponivel": {
+      "label": "Pronta entrega",
+      "cta": "Quero esta",
+      "message": "Oi! Quero comprar a figure *{nome}* ({preco}, pronta entrega)."
+    },
+    "ultimas": {
+      "label": "Últimas unidades",
+      "cta": "Garantir a minha",
+      "message": "Oi! Quero garantir a figure *{nome}* ({preco}, últimas unidades)."
+    },
+    "encomenda": {
+      "label": "Sob encomenda",
+      "cta": "Encomendar",
+      "message": "Oi! Quero encomendar a figure *{nome}* (a partir de {preco})."
+    },
+    "esgotado": {
+      "label": "Esgotado",
+      "cta": "Avise-me quando voltar",
+      "message": "Oi! Quero ser avisado quando a figure *{nome}* voltar."
+    }
+  },
+  "universes": {
+    "games": "Games",
+    "anime": "Anime",
+    "autoral": "Autoral",
+    "outros": "Outros"
+  },
+  "defaults": {
+    "material": "Resina 16K, pintada à mão"
+  },
+  "nav": [
+    {
+      "label": "Catálogo",
+      "href": "/figures/"
+    },
+    {
+      "label": "Pronta entrega",
+      "href": "/figures/?disponibilidade=pronta"
+    },
+    {
+      "label": "Como é feita",
+      "href": "/como-e-feita/"
+    },
+    {
+      "label": "Como pedir",
+      "href": "/#como-pedir"
+    },
+    {
+      "label": "Dúvidas",
+      "href": "/#duvidas"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Figures de resina · feitas à mão",
+    "title": "Figures pintadas à mão, com o seu nome na base.",
+    "subtitle": "Impressas em resina 16K e pintadas no pincel, em tiragens curtas. Algumas já estão prontas pra enviar.",
+    "ctaPrimary": "Pedir no WhatsApp",
+    "ctaSecondary": "Ver catálogo",
+    "readyLabel": "{n} prontas pra enviar agora",
+    "note": "Personagens que saíram da tela e pararam na sua estante",
+    "media": {
+      "type": "video",
+      "poster": {
+        "src": "/img/mascote/dupla-armadura",
+        "alt": "Dragão azul e dragão preto de armadura trabalhando juntos na pintura de uma figure de resina no ateliê.",
+        "w": 960,
+        "h": 960
+      },
+      "sources": [
+        {
+          "src": "/video/dois-dragoes-armadura.mp4",
+          "type": "video/mp4"
+        }
+      ]
+    }
+  },
+  "highlights": [
+    {
+      "title": "Assinada pra você",
+      "text": "Toda peça sai com um \"Obrigado\" e o nome de quem vai receber. Vale pra presente também."
+    },
+    {
+      "title": "Pintura à mão",
+      "text": "Sombra, luz e desgaste feitos no pincel, camada por camada."
+    },
+    {
+      "title": "Resina 16K",
+      "text": "Detalhe de escama, costura e fio de cabelo visível a olho nu."
+    }
+  ],
+  "gallery": {
+    "eyebrow": "A estante",
+    "title": "Qual delas é a sua?",
+    "intro": "Pronta entrega já está pintada e sai em poucos dias. Sob encomenda, a gente imprime e pinta a sua do zero.",
+    "filterAll": "Todas",
+    "filterReady": "Pronta entrega",
+    "filterOrder": "Encomenda",
+    "emptyTitle": "Nenhuma peça neste filtro por enquanto.",
+    "emptyAction": "Ver todas as figures"
+  },
+  "process": {
+    "eyebrow": "Como nasce uma figure",
+    "title": "Da resina à sua estante",
+    "intro": "Tudo feito aqui, do arquivo à caixa.",
+    "steps": [
+      {
+        "title": "Impressão em resina 16K",
+        "text": "A impressora sobe a peça em camadas de poucos mícrons, por isso dobra de roupa e mecha de cabelo aparecem. Depois vem cura UV e acabamento manual: tirar suporte e lixar.",
+        "image": {
+          "src": "/img/geradas/atelier-resina",
+          "alt": "Ronin fictício em resina cinza, ainda sem pintura, sobre bancada de acabamento.",
+          "w": 1168,
+          "h": 880
+        }
+      },
+      {
+        "title": "Pintura à mão",
+        "text": "Primer, camadas de cor, sombra e luz pintadas com pincel. Nenhuma peça sai idêntica à outra.",
+        "image": {
+          "src": "/img/geradas/atelier-pintura",
+          "alt": "Mão pintando o manto de uma figure fictícia de samurai com pincel fino.",
+          "w": 1168,
+          "h": 880
+        }
+      },
+      {
+        "title": "Base assinada",
+        "text": "Antes de embalar, a base recebe um \"Obrigado\" e o nome de quem vai receber a peça.",
+        "image": {
+          "src": "/img/geradas/atelier-assinatura",
+          "alt": "Figure fictícia de samurai finalizada, com uma pequena assinatura na base.",
+          "w": 1168,
+          "h": 880
+        }
+      }
+    ]
+  },
+  "detail": {
+    "eyebrow": "De perto",
+    "title": "De perto, dá pra contar as costuras",
+    "intro": "Pintura, textura e acabamento, vistos de perto.",
+    "macro": {
+      "src": "/img/geradas/atelier-macro",
+      "alt": "Detalhe ilustrativo da pintura e das costuras de uma figure fictícia de samurai.",
+      "w": 1344,
+      "h": 752
+    },
+    "macroCaption": "Detalhes de pintura e textura em uma figure fictícia.",
+    "scaleCaption": "Comparação ilustrativa: {cm} cm de altura. A garrafa de 600 ml é uma referência aproximada.",
+    "scaleHeightCm": 24,
+    "base": {
+      "src": "/img/geradas/atelier-base",
+      "alt": "Base de resina fictícia com plaqueta vazia para prévia de personalização.",
+      "w": 896,
+      "h": 1120
+    },
+    "baseTitle": "Testa o seu nome na base",
+    "baseText": "Toda peça leva um \"Obrigado\" e um nome. Digita o seu (ou o de quem vai ganhar) e vê como fica.",
+    "baseThanks": "Obrigado",
+    "baseInputLabel": "Seu nome na base",
+    "baseDefaultName": "Seu nome aqui",
+    "baseTextTop": 73,
+    "scaleImage": {
+      "src": "/img/geradas/atelier-escala",
+      "alt": "Figure fictícia de samurai inteira, usada na comparação ilustrativa de altura.",
+      "w": 501,
+      "h": 1092
+    }
+  },
+  "howTo": {
+    "eyebrow": "Como pedir",
+    "title": "Pedir leva três passos",
+    "steps": [
+      {
+        "title": "Escolha a peça",
+        "text": "Abre a figure aqui na página e vê fotos, altura e prazo."
+      },
+      {
+        "title": "Chame no WhatsApp",
+        "text": "A mensagem já vai pronta com o nome da figure. Pagamento e frete a gente combina ali."
+      },
+      {
+        "title": "Receba em casa, assinada",
+        "text": "Embalagem anti-impacto e envio para todo o Brasil, com código de rastreio."
+      }
+    ],
+    "readyNote": "Pronta entrega: a peça já existe e sai em poucos dias úteis.",
+    "orderNote": "Sob encomenda: produzimos a sua do zero. O prazo aparece em cada obra."
+  },
+  "socialProof": {
+    "eyebrow": "Na estante de quem comprou",
+    "title": "Quem tem, mostra",
+    "ugc": [
+      {
+        "image": {
+          "src": "/img/geradas/ronin-do-crepusculo",
+          "alt": "Ronin do Crepúsculo, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+          "w": 896,
+          "h": 1120
+        },
+        "handle": "@cliente.um",
+        "figure": "Ronin do Crepúsculo",
+        "placeholder": true
+      },
+      {
+        "image": {
+          "src": "/img/geradas/raposa-espiritual",
+          "alt": "Raposa Espiritual, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+          "w": 896,
+          "h": 1120
+        },
+        "handle": "@cliente.dois",
+        "figure": "Raposa Espiritual",
+        "placeholder": true
+      },
+      {
+        "image": {
+          "src": "/img/geradas/maga-estelar",
+          "alt": "Maga Estelar, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+          "w": 896,
+          "h": 1120
+        },
+        "handle": "@cliente.tres",
+        "figure": "Maga Estelar",
+        "placeholder": true
+      },
+      {
+        "image": {
+          "src": "/img/geradas/samurai-neon",
+          "alt": "Samurai Neon, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+          "w": 896,
+          "h": 1120
+        },
+        "handle": "@cliente.quatro",
+        "figure": "Samurai Neon",
+        "placeholder": true
+      }
+    ],
+    "testimonials": [
+      {
+        "author": "Nome do cliente",
+        "handle": "@cliente.um",
+        "text": "Depoimento provisório. Substituir por um relato real, de preferência com print da conversa ou foto da peça.",
+        "placeholder": true
+      },
+      {
+        "author": "Nome do cliente",
+        "handle": "@cliente.dois",
+        "text": "Depoimento provisório. Bons relatos falam do detalhe ao vivo, da embalagem e do nome na base.",
+        "placeholder": true
+      },
+      {
+        "author": "Nome do cliente",
+        "handle": "@cliente.tres",
+        "text": "Depoimento provisório. Se o cliente comprou de presente, a reação de quem ganhou converte muito.",
+        "placeholder": true
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Dúvidas",
+    "title": "Antes de pedir",
+    "items": [
+      {
+        "q": "Qual a diferença entre pronta entrega e encomenda?",
+        "a": "Pronta entrega é uma peça que já está pintada e pronta: sai em poucos dias úteis. Sob encomenda, produzimos a sua do zero (impressão, pintura e assinatura), e o prazo de produção aparece em cada obra."
+      },
+      {
+        "q": "Qual o prazo de produção e de envio?",
+        "a": "Pronta entrega: despacho em até X dias úteis. Encomenda: cerca de X dias de produção, mais o prazo dos Correios ou da transportadora. [PROVISÓRIO: preencher prazos reais]"
+      },
+      {
+        "q": "Como o frete é calculado?",
+        "a": "Enviamos para todo o Brasil. O frete é calculado pelo seu CEP na conversa do WhatsApp, antes de fechar o pedido. [PROVISÓRIO: confirmar política de frete]"
+      },
+      {
+        "q": "A pintura está inclusa?",
+        "a": "Sim. Toda figure sai pintada à mão. [PROVISÓRIO: se existir versão sem pintura (garage kit), dizer aqui]"
+      },
+      {
+        "q": "Posso personalizar a peça?",
+        "a": "O nome na base vai em todas as peças, sem custo. Mudanças de cor ou detalhe a gente avalia caso a caso, no WhatsApp."
+      },
+      {
+        "q": "Como a peça chega protegida?",
+        "a": "Vai em embalagem anti-impacto, com as partes finas protegidas à parte. [PROVISÓRIO: descrever a embalagem real]"
+      },
+      {
+        "q": "Como cuidar da figure?",
+        "a": "Evite sol direto, que desbota a pintura com o tempo. Para limpar, use pincel macio ou soprador; nada de pano úmido ou produto químico."
+      },
+      {
+        "q": "Quais as formas de pagamento?",
+        "a": "Combinamos pelo WhatsApp. [PROVISÓRIO: listar Pix, cartão, parcelamento]"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Viu alguma que é a sua cara?",
+    "text": "Chama no WhatsApp. Dá pra pedir, tirar dúvida ou perguntar por aquele personagem que ainda não está aqui.",
+    "cta": "Chamar no WhatsApp",
+    "instagramCta": "Seguir no Instagram"
+  },
+  "notify": {
+    "title": "Avise-me do próximo drop",
+    "text": "As tiragens são curtas. Deixa seu e-mail e fica sabendo quando sair peça nova.",
+    "endpoint": "",
+    "mailto": "contato@exemplo.com",
+    "emailLabel": "Seu e-mail",
+    "submit": "Me avisa",
+    "sending": "Enviando…",
+    "success": "Pronto! Quando sair peça nova, você fica sabendo por e-mail.",
+    "error": "Não deu para enviar agora. Tente de novo ou chame no WhatsApp.",
+    "invalid": "Confira o e-mail: parece que falta alguma coisa.",
+    "mailtoNote": "Abrimos o seu app de e-mail com a mensagem pronta. É só enviar."
+  },
+  "footer": {
+    "note": "Figures em resina 16K, pintadas à mão no Brasil.",
+    "legal": "Peças de fã, produzidas artesanalmente. Personagens pertencem aos seus respectivos donos."
+  },
+  "ui": {
+    "close": "Fechar",
+    "offline": "Você está sem internet. As fotos podem não carregar, e o WhatsApp abre quando a conexão voltar.",
+    "imageError": "Não foi possível carregar a foto",
+    "height": "Altura",
+    "material": "Material",
+    "shipping": "Despacho em até {dias} dias úteis",
+    "production": "Produção em ~{dias} dias + envio",
+    "stockLeft": "Restam {n}",
+    "stockOf": "{n} de {total} disponíveis",
+    "view3d": "Girar em 3D",
+    "loading3d": "Carregando modelo 3D…",
+    "prev": "Foto anterior",
+    "next": "Próxima foto",
+    "menu": "Menu"
+  },
+  "analytics": {
+    "provider": "none",
+    "plausibleDomain": "",
+    "ga4Id": ""
+  },
+  "mascot": {
+    "atelier": {
+      "src": "/img/mascote/atelier",
+      "alt": "Mascote dragão da TAMAGO pintando uma pequena figure de resina no ateliê, sob luz de cristal turquesa.",
+      "w": 896,
+      "h": 1120
+    },
+    "welcome": {
+      "src": "/img/mascote/boas-vindas",
+      "alt": "Dragão mascote da TAMAGO acenando e segurando um cristal rúnico luminoso.",
+      "w": 896,
+      "h": 1120
+    },
+    "companion": {
+      "src": "/img/mascote/armadura-modelo.webp",
+      "alt": "Dragão preto mascote da TAMAGO com pequena armadura, lenço vinho e olhos âmbar.",
+      "w": 2688,
+      "h": 1520
+    },
+    "note": "Um pouco de magia. Muito trabalho no pincel."
+  },
+  "showcase": {
+    "eyebrow": "A estante",
+    "title": "Em destaque agora",
+    "intro": "Uma amostra do catálogo. Pronta entrega sai em poucos dias; sob encomenda, a gente imprime e pinta a sua do zero.",
+    "cta": "Ver o catálogo completo",
+    "universesEyebrow": "Universos",
+    "universesTitle": "Navegue pelo seu mundo favorito",
+    "universeCount": "{n} figures",
+    "universeCountOne": "1 figure"
+  },
+  "catalog": {
+    "eyebrow": "Catálogo",
+    "title": "Todas as figures",
+    "intro": "Filtre por universo, tamanho e disponibilidade. Cada figure tem botão direto pro WhatsApp.",
+    "universeAll": "Todas",
+    "searchLabel": "Buscar",
+    "searchPlaceholder": "Nome ou universo",
+    "availabilityLabel": "Disponibilidade",
+    "availability": {
+      "todas": "Todas",
+      "pronta": "Pronta entrega",
+      "encomenda": "Sob encomenda"
+    },
+    "showSoldOut": "Mostrar esgotadas",
+    "sizeLabel": "Tamanho",
+    "sizes": {
+      "todos": "Qualquer",
+      "p": "Até 18 cm",
+      "m": "18 a 25 cm",
+      "g": "Acima de 25 cm"
+    },
+    "priceLabel": "Preço até",
+    "priceAny": "Sem limite",
+    "priceSteps": [
+      500,
+      700,
+      1000
+    ],
+    "sortLabel": "Ordenar",
+    "sorts": {
+      "destaques": "Destaques",
+      "menor": "Menor preço",
+      "maior": "Maior preço",
+      "novidades": "Novidades",
+      "altura": "Maiores primeiro"
+    },
+    "results": "{n} figures",
+    "resultsOne": "1 figure",
+    "filtersButton": "Filtrar",
+    "filtersTitle": "Filtros",
+    "showResults": "Ver {n} figures",
+    "clear": "Limpar filtros",
+    "emptyTitle": "Nenhuma figure com esses filtros agora.",
+    "emptyText": "Dá pra encomendar: conta no WhatsApp qual personagem você procura.",
+    "emptyCta": "Pedir pelo WhatsApp",
+    "pricesPlaceholder": true,
+    "pricesNote": "Preços provisórios",
+    "from": "a partir de",
+    "seeDetails": "Ver detalhes",
+    "quickBuy": "WhatsApp",
+    "customEyebrow": "Encomenda sob medida",
+    "customTitle": "Não encontrou sua figure por aqui?",
+    "customText": "Conta pra gente qual personagem você quer na estante. A gente avalia e te responde no WhatsApp com prazo e valor.",
+    "customCta": "Conversar no WhatsApp",
+    "customMessage": "Oi! Não achei no catálogo a figure que eu quero. Queria encomendar: ",
+    "processLink": "Como nasce uma figure",
+    "resultsHeading": "Figures encontradas"
+  },
+  "product": {
+    "breadcrumbHome": "Início",
+    "breadcrumbCatalog": "Catálogo",
+    "specsTitle": "Ficha técnica",
+    "specUniverse": "Universo",
+    "specHeight": "Altura",
+    "specMaterial": "Material",
+    "specEdition": "Tiragem",
+    "specEditionValue": "{n} peças",
+    "specPainting": "Pintura",
+    "specPaintingValue": "À mão, peça por peça",
+    "specBase": "Base",
+    "specBaseValue": "Assinada com um \"Obrigado\" e um nome",
+    "nameOnBaseLabel": "Nome na base (opcional)",
+    "nameOnBaseHint": "Vai junto na mensagem do WhatsApp. Pode ser o seu ou o de quem vai ganhar.",
+    "reassurance": [
+      {
+        "icon": "caixa",
+        "text": "Envio para todo o Brasil, com código de rastreio"
+      },
+      {
+        "icon": "pincel",
+        "text": "Pintada à mão, peça por peça"
+      },
+      {
+        "icon": "whatsapp",
+        "text": "Pagamento e frete combinados no WhatsApp"
+      }
+    ],
+    "relatedTitle": "Mais de {universo}",
+    "relatedFallback": "Outras figures da estante",
+    "seeAll": "Ver todo o catálogo",
+    "notFoundTitle": "Figure não encontrada",
+    "notFoundText": "Ela pode ter saído do catálogo, ou o link está errado.",
+    "notFoundCta": "Ver o catálogo"
+  },
+  "seo": {
+    "siteUrl": "https://tamagofigures.com.br",
+    "homeTitle": "TAMAGO Figures & 3D Studio · Figures em resina pintadas à mão",
+    "homeDescription": "Figures de coleção em resina 16K, pintadas à mão e com o seu nome na base. Pronta entrega e sob encomenda, com envio para todo o Brasil.",
+    "catalogTitle": "Catálogo de figures em resina | TAMAGO",
+    "catalogDescription": "Todas as figures da TAMAGO: games, anime e autorais, em resina 16K pintada à mão. Filtre por universo, tamanho e disponibilidade e peça pelo WhatsApp.",
+    "productTitle": "{nome} · figure em resina {altura} cm | TAMAGO",
+    "productDescription": "{nome}: figure em resina 16K de {altura} cm, pintada à mão, com nome na base. {status}. Peça pelo WhatsApp.",
+    "notFoundTitle": "Página não encontrada | TAMAGO",
+    "processTitle": "Como nasce uma figure: resina 16K e pintura à mão | TAMAGO",
+    "processDescription": "Da impressão em resina 16K à pintura à mão e à base assinada com o seu nome: veja como cada figure da TAMAGO é feita."
+  },
+  "processPage": {
+    "eyebrow": "Do arquivo à sua estante",
+    "title": "Como nasce uma figure",
+    "intro": "Impressão em resina 16K, pintura à mão e a base assinada com o seu nome. Cada etapa feita aqui, peça por peça.",
+    "ctaCatalog": "Ver o catálogo",
+    "ctaWhatsapp": "Tirar dúvida no WhatsApp"
+  },
+  "processTeaser": {
+    "eyebrow": "Como é feita",
+    "title": "Da resina à sua estante",
+    "text": "Impressão em resina 16K, pintura à mão e a base assinada. Veja cada etapa de perto.",
+    "cta": "Ver como nasce uma figure"
+  }
+}

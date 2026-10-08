@@ -1,0 +1,225 @@
+{
+  "pagina": "tamago-landing (dist/index.html pré-renderizado)",
+  "nota_antes": "5/5",
+  "nota_depois": "5/5",
+  "percepcoes": [
+    "O linter dava 5/5 já na versão anterior: o problema não era tique mecânico de IA, era o tom. Vocabulário de galeria (\"Arte de coleção\", \"Obras\") falando com público geek.",
+    "Quatro afirmações sem base na spec tinham entrado na primeira versão: caixa com espuma recortada, versão sem pintura, \"esgotam rápido\" e \"antes de todo mundo\". Saíram ou viraram [PROVISÓRIO].",
+    "Repetições: \"Nenhuma sai igual à outra\" 2×, o detalhe de 16K 3×, \"estante\" em títulos seguidos.",
+    "Estágio de consciência (Schwartz): o tráfego vem do Instagram e já viu as peças. A primeira dobra vai direto à diferença (pintura à mão + nome na base).",
+    "Falso positivo do scanner: \"a página não pede nada\". Ele procura a classe .btn, e os 6 CTAs do site são links com classes do Tailwind.",
+    "Depoimentos e fotos de clientes continuam provisórios e marcados na tela. Nenhuma prova foi inventada para preencher."
+  ],
+  "trocas": [
+    {
+      "onde": "site.json → nav[0].label",
+      "antes": "Obras",
+      "depois": "Figures",
+      "motivo": "Vocabulário do público: geek fala \"figure\", não \"obra\" (termo de galeria)."
+    },
+    {
+      "onde": "site.json → nav[1].label",
+      "antes": "Processo",
+      "depois": "Como é feita",
+      "motivo": "\"Processo\" é rótulo de pasta; o menu diz o que a pessoa vai ver."
+    },
+    {
+      "onde": "site.json → hero.eyebrow",
+      "antes": "Arte de coleção · tiragens pequenas",
+      "depois": "Figures de resina · feitas à mão",
+      "motivo": "\"Arte de coleção\" é selo de catálogo de luxo; nomear o produto como o público chama."
+    },
+    {
+      "onde": "site.json → hero.title",
+      "antes": "Cada figure sai daqui com o seu nome na base.",
+      "depois": "Figures pintadas à mão, com o seu nome na base.",
+      "motivo": "Caples: o título diz o que a pessoa ganha (a peça e o diferencial) em vez de narrar a saída da oficina."
+    },
+    {
+      "onde": "site.json → hero.subtitle",
+      "antes": "Figures em resina 16K, pintadas à mão, peça por peça.",
+      "depois": "Impressas em resina 16K e pintadas no pincel, em tiragens curtas. Algumas já estão prontas pra enviar.",
+      "motivo": "Sugarman: a frase leva direto ao contador de peças prontas, logo abaixo, e assume o registro informal do público."
+    },
+    {
+      "onde": "site.json → hero.ctaSecondary",
+      "antes": "Ver as obras",
+      "depois": "Ver as figures",
+      "motivo": "CTA nomeia o destino com a palavra do público."
+    },
+    {
+      "onde": "site.json → hero.readyLabel",
+      "antes": "{n} peças prontas para envio",
+      "depois": "{n} prontas pra enviar agora",
+      "motivo": "Mais curto e falado; o número continua vindo do estoque real."
+    },
+    {
+      "onde": "site.json → hero.note",
+      "antes": "Mais que figures: personagens de um mundo que você pode tocar.",
+      "depois": "Personagens que saíram da tela e pararam na sua estante",
+      "motivo": "\"Mais que figures: …\" é a construção \"mais que X\", parente do tique nº 1 do catálogo anti-genérico."
+    },
+    {
+      "onde": "site.json → brand.tagline",
+      "antes": "Pequenas histórias, grandes formas.",
+      "depois": "Feitas à mão, uma de cada vez.",
+      "motivo": "\"Pequenas histórias, grandes formas\" é bonito e vago (Ogilvy: serviria pra qualquer marca). Trocado por um fato."
+    },
+    {
+      "onde": "site.json → highlights[0].text",
+      "antes": "Toda peça sai assinada com um \"Obrigado\" e o nome de quem vai receber.",
+      "depois": "Toda peça sai com um \"Obrigado\" e o nome de quem vai receber. Vale pra presente também.",
+      "motivo": "Inclui o presenteador, que a spec lista como público, sem prometer nada novo."
+    },
+    {
+      "onde": "site.json → highlights[1].text",
+      "antes": "Camada por camada, com pincel. Nenhuma sai igual à outra.",
+      "depois": "Sombra, luz e desgaste feitos no pincel, camada por camada.",
+      "motivo": "Tirava a repetição de \"nenhuma sai igual à outra\", que já está no processo; troca por o que a pintura entrega."
+    },
+    {
+      "onde": "site.json → gallery.eyebrow",
+      "antes": "Obras",
+      "depois": "A estante",
+      "motivo": "\"Obras\" é termo de galeria; a seção vira a estante da loja."
+    },
+    {
+      "onde": "site.json → gallery.title",
+      "antes": "Escolha a sua peça",
+      "depois": "Qual delas é a sua?",
+      "motivo": "\"Escolha a sua peça\" é instrução; a pergunta puxa a escolha no tom do público. Evita \"estante\" em dois títulos seguidos."
+    },
+    {
+      "onde": "site.json → gallery.intro",
+      "antes": "Pronta entrega sai em poucos dias. Sob encomenda, a gente produz a sua do zero.",
+      "depois": "Pronta entrega já está pintada e sai em poucos dias. Sob encomenda, a gente imprime e pinta a sua do zero.",
+      "motivo": "Específico sobre a diferença entre os dois fluxos (spec §3.1, item 5)."
+    },
+    {
+      "onde": "site.json → gallery.emptyAction",
+      "antes": "Ver todas as obras",
+      "depois": "Ver todas as figures",
+      "motivo": "Mesma palavra do menu e do hero."
+    },
+    {
+      "onde": "site.json → process.eyebrow",
+      "antes": "Processo",
+      "depois": "Como nasce uma figure",
+      "motivo": "Sobretítulo conta o que vem, em vez de rotular."
+    },
+    {
+      "onde": "site.json → process.intro",
+      "antes": "Três etapas, todas feitas aqui, sem atalho.",
+      "depois": "Tudo feito aqui, do arquivo à caixa.",
+      "motivo": "\"Sem atalho\" soava forçado; o fato (tudo feito aqui) carrega a mesma ideia."
+    },
+    {
+      "onde": "site.json → process.steps[0].text",
+      "antes": "Camadas de poucos mícrons capturam cada dobra de tecido e fio de cabelo. Depois, cura UV e acabamento manual.",
+      "depois": "A impressora sobe a peça em camadas de poucos mícrons, por isso dobra de roupa e mecha de cabelo aparecem. Depois vem cura UV e acabamento manual: tirar suporte e lixar.",
+      "motivo": "Quem coleciona resina conhece suporte e cura; o detalhe técnico real conversa melhor que \"capturam cada dobra\"."
+    },
+    {
+      "onde": "site.json → detail.title",
+      "antes": "O detalhe que a foto do feed não mostra",
+      "depois": "De perto, dá pra contar as costuras",
+      "motivo": "\"O detalhe que a foto do feed não mostra\" é fórmula (\"o que ninguém te mostra\"); o novo título é uma afirmação verificável na foto."
+    },
+    {
+      "onde": "site.json → detail.intro",
+      "antes": "Resolução 16K significa textura de couro, costura e fio de cabelo visíveis a olho nu.",
+      "depois": "Isso aqui é zoom de verdade. É assim que a peça chega na sua mão.",
+      "motivo": "O texto antigo repetia pela terceira vez a frase dos 16K; agora aponta para a foto."
+    },
+    {
+      "onde": "site.json → detail.scaleCaption",
+      "antes": "Altura real: {cm} cm, do tamanho de uma garrafa de 600 ml.",
+      "depois": "Altura real: {cm} cm, mais ou menos a altura de uma garrafa de 600 ml.",
+      "motivo": "\"Do tamanho de\" dizia igual; \"mais ou menos\" é honesto (24 cm contra ~23 cm)."
+    },
+    {
+      "onde": "site.json → detail.baseTitle",
+      "antes": "A base é sua",
+      "depois": "Testa o seu nome na base",
+      "motivo": "O título vira o convite pra interagir com o campo logo abaixo."
+    },
+    {
+      "onde": "site.json → detail.baseText",
+      "antes": "Toda peça leva um \"Obrigado\" e o nome de quem vai recebê-la. Digite o seu e veja como fica.",
+      "depois": "Toda peça leva um \"Obrigado\" e um nome. Digita o seu (ou o de quem vai ganhar) e vê como fica.",
+      "motivo": "Mesmo fato, em tom de conversa, e lembrando do presente."
+    },
+    {
+      "onde": "site.json → howTo.title",
+      "antes": "Três passos até a sua estante",
+      "depois": "Pedir leva três passos",
+      "motivo": "Título afirma em vez de reutilizar \"estante\" pela quarta vez."
+    },
+    {
+      "onde": "site.json → howTo.steps[0].text",
+      "antes": "Abra a obra na galeria e veja fotos, altura e prazo.",
+      "depois": "Abre a figure aqui na página e vê fotos, altura e prazo.",
+      "motivo": "\"Obra\" → \"figure\"; mesmo tom dos outros passos."
+    },
+    {
+      "onde": "site.json → faq.items[3].a",
+      "antes": "Sim. Toda figure sai pintada à mão. Se você prefere pintar, pergunte pela versão sem pintura.",
+      "depois": "Sim. Toda figure sai pintada à mão. [PROVISÓRIO: se existir versão sem pintura (garage kit), dizer aqui]",
+      "motivo": "Prova inventada: a versão sem pintura não está na spec. Virou pendência explícita."
+    },
+    {
+      "onde": "site.json → faq.items[5].a",
+      "antes": "Cada figure vai em caixa rígida com espuma recortada no formato da peça, e as partes finas são protegidas separadamente.",
+      "depois": "Vai em embalagem anti-impacto, com as partes finas protegidas à parte. [PROVISÓRIO: descrever a embalagem real]",
+      "motivo": "Prova inventada: \"caixa rígida com espuma recortada\" não estava na spec. Ficou só o que a spec garante."
+    },
+    {
+      "onde": "site.json → finalCta.title",
+      "antes": "Sua peça está a uma mensagem de distância.",
+      "depois": "Viu alguma que é a sua cara?",
+      "motivo": "\"A uma mensagem de distância\" é clichê de anúncio; a pergunta retoma a galeria."
+    },
+    {
+      "onde": "site.json → finalCta.text",
+      "antes": "Chame no WhatsApp para pedir, tirar dúvidas ou encomendar algo do seu universo favorito.",
+      "depois": "Chama no WhatsApp. Dá pra pedir, tirar dúvida ou perguntar por aquele personagem que ainda não está aqui.",
+      "motivo": "Nomeia a dor real do colecionador (o personagem que falta) sem prometer que ele vai ser feito."
+    },
+    {
+      "onde": "site.json → finalCta.cta",
+      "antes": "Pedir no WhatsApp",
+      "depois": "Chamar no WhatsApp",
+      "motivo": "O CTA diz o que acontece: abre a conversa."
+    },
+    {
+      "onde": "site.json → notify.text",
+      "antes": "Tiragens pequenas esgotam rápido. Deixe seu e-mail e saiba antes de todo mundo.",
+      "depois": "As tiragens são curtas. Deixa seu e-mail e fica sabendo quando sair peça nova.",
+      "motivo": "\"Esgotam rápido\" era afirmação sem prova (spec: escassez honesta)."
+    },
+    {
+      "onde": "site.json → notify.submit",
+      "antes": "Quero ser avisado",
+      "depois": "Me avisa",
+      "motivo": "Botão curto, na voz de quem clica."
+    },
+    {
+      "onde": "site.json → notify.success",
+      "antes": "Pronto! Você vai saber do próximo drop antes de todo mundo.",
+      "depois": "Pronto! Quando sair peça nova, você fica sabendo por e-mail.",
+      "motivo": "\"Antes de todo mundo\" prometia uma vantagem que não está garantida."
+    },
+    {
+      "onde": "site.json → highlights[0].title",
+      "antes": "Seu nome na base",
+      "depois": "Assinada pra você",
+      "motivo": "Lido em sequência, \"Seu nome na base\" repetia o h1 logo acima."
+    },
+    {
+      "onde": "index.html → og:title",
+      "antes": "TAMAGO Figures · Arte de coleção em resina",
+      "depois": "TAMAGO Figures · pintadas à mão, com seu nome na base",
+      "motivo": "O card de compartilhamento leva o diferencial, não o selo \"arte de coleção\"."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+/*
+ * TOKENS DE DESIGN — trocar a paleta inteira = editar só este arquivo.
+ *
+ * Duas atmosferas, uma marca (06/10/2026):
+ *  - DIA (padrão): a estética clara da logo. Linho avermelhado de fundo, tinta ameixa
+ *    (a cor do "TAMAGO" na logo), o azul do site como ação e a brasa da chama como acento pequeno.
+ *  - NOITE (escopo .tema-noite): o ateliê iluminado pelo cristal, que o site já tinha.
+ *    Fica no hero, como uma janela noturna sobre o linho, o mesmo gesto do ovo sobre o papel.
+ * As duas compartilham o índigo (o dragão azul da logo ≈ o índigo do site) e o turquesa do cristal.
+ * Contrastes conferidos em src/styles/contraste.test.ts, nos dois temas.
+ */
+@theme {
+  /* Superfícies (dia: linho) */
+  --color-fundo: #f7eef1;
+  --color-superficie: #fffafb;
+  --color-superficie-2: #efe2e7;
+  --color-linha: #dcc6cf;
+
+  /* Texto: a tinta ameixa da palavra TAMAGO */
+  --color-texto: #2b1427;
+  --color-texto-suave: #6a5466;
+
+  /* Paleta compartilhada */
+  --color-indigo: #262a6b;
+  --color-turquesa: #2ec7c9;
+  --color-ceu: #3a7bbf;
+  --color-lavanda: #5f4fc0;
+  --color-lilas: #6e57b5;
+
+  /* Fogo da logo: a chama do O e a orbe laranja. Acento pequeno, nunca fundo de seção. */
+  --color-brasa: #b8321a;
+  --color-chama: #f04a1c;
+
+  /* Ação: o azul do site (o mesmo do dragão azul da logo) */
+  --color-acento: #2f3291;
+  --color-acento-forte: #23266f;
+  --color-sobre-acento: #ffffff;
+  --color-brilho: #4fd8ff;
+
+  /* Painel "folha de modelo": no dia é o branco mais limpo sobre o linho */
+  --color-papel: #ffffff;
+  --color-tinta: #2b1427;
+  --color-tinta-suave: #6a5466;
+  --color-tinta-ok: #0a7052;
+  --color-tinta-lavanda: #5b4bc4;
+
+  --color-whatsapp: #25d366;
+
+  /* Status das peças — sempre com texto + ícone junto (spec §7) */
+  --color-status-disponivel: #0a7052;
+  --color-status-ultimas: #a83c17;
+  --color-status-encomenda: #5b4bc4;
+  --color-status-esgotado: #625e76;
+
+  /* Tipografia: Cinzel (romana entalhada, ar medieval) p/ títulos e marca · sans arredondada p/ leitura ·
+     letra de giz só nas anotações (carregada sem preload, fora da 1ª dobra) */
+  --font-display: 'Cinzel Variable', ui-serif, Georgia, serif;
+  --font-sans: 'Nunito Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-giz: 'Caveat Variable', 'Segoe Print', cursive;
+
+  --radius-cartao: 1.5rem;
+  --ease-saida: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+ * NOITE: redefine as mesmas variáveis dentro do bloco. Todo utilitário do Tailwind
+ * (bg-fundo, text-texto…) lê a variável, então qualquer trecho com .tema-noite
+ * vira o ateliê noturno sem tocar em componente nenhum.
+ */
+.tema-noite {
+  --color-fundo: #0b0c1f;
+  --color-superficie: #13153a;
+  --color-superficie-2: #1c1f4d;
+  --color-linha: #2e3272;
+  --color-texto: #ece8fa;
+  --color-texto-suave: #a9a6d6;
+  --color-ceu: #5ab4e6;
+  --color-lavanda: #9d8cf0;
+  --color-lilas: #e3dcf7;
+  --color-brasa: #ff8a5c;
+  --color-acento: #2ec7c9;
+  --color-acento-forte: #63e2df;
+  --color-sobre-acento: #04202a;
+  --color-papel: #ebe7f5;
+  --color-tinta: #1a1c48;
+  --color-tinta-suave: #4b4d80;
+  --color-tinta-ok: #13866a;
+  --color-status-disponivel: #4fe0b0;
+  --color-status-ultimas: #ffb36b;
+  --color-status-encomenda: #b3a6ff;
+  --color-status-esgotado: #8f91b8;
+  color: var(--color-texto);
+}

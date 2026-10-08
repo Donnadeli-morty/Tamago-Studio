@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatório de copy</title>
+<style>
+  :root { --papel:#faf8f4; --tinta:#20242c; --sec:#5c6470; --borda:#e3ded4;
+           --carta:#fff; --ruim:#b3403c; --bom:#0a7a52; --fundo-ruim:#faf0ef;
+           --fundo-bom:#edf7f2 }
+  * { box-sizing:border-box; margin:0 }
+  body { background:var(--papel); color:var(--tinta);
+          font:16px/1.55 system-ui,-apple-system,sans-serif; padding:48px 24px }
+  main { max-width:880px; margin:0 auto }
+  h1 { font-size:34px; letter-spacing:-.02em }
+  h2 { font-size:15px; text-transform:uppercase; letter-spacing:.08em;
+        color:var(--sec); margin:40px 0 16px }
+  .sub { color:var(--sec); margin-top:6px }
+  .notas { display:flex; align-items:center; gap:18px; margin:28px 0 8px }
+  .nota { background:var(--carta); border:1px solid var(--borda); border-radius:14px;
+           padding:14px 22px; text-align:center; color:var(--sec); font-size:12px }
+  .nota span { display:block; font-size:30px; font-weight:700; color:var(--ruim) }
+  .nota.boa span { color:var(--bom) }
+  .seta { font-size:22px; color:var(--sec) }
+  .percepcoes { padding-left:20px; display:flex; flex-direction:column; gap:6px }
+  .troca { background:var(--carta); border:1px solid var(--borda); border-radius:14px;
+            padding:18px; margin-bottom:14px }
+  .par { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+  @media (max-width:640px) { .par { grid-template-columns:1fr } }
+  .antes, .depois { border-radius:10px; padding:12px 14px; font-size:15px }
+  .antes { background:var(--fundo-ruim); text-decoration:line-through;
+            text-decoration-color:rgba(179,64,60,.4); text-decoration-thickness:1px }
+  .depois { background:var(--fundo-bom); font-weight:600 }
+  .rotulo { display:block; font-size:10.5px; text-transform:uppercase;
+             letter-spacing:.08em; color:var(--sec); margin-bottom:5px;
+             font-weight:400; text-decoration:none }
+  .motivo { margin-top:10px; font-size:13.5px; color:var(--sec) }
+  .onde { background:#f3f0e9; border-radius:6px; padding:1px 7px; font-size:12px }
+  .vazio { color:var(--sec) }
+  footer { margin-top:40px; color:var(--sec); font-size:13px }
+</style>
+</head>
+<body>
+<main>
+  <h1>Relatório de copy</h1>
+  <p class="sub">35 linha(s) reescrita(s) — tamago-landing (dist/index.html pré-renderizado)</p>
+  <div class="notas">
+  <div class="nota"><span>5/5</span>antes</div>
+  <div class="seta">→</div>
+  <div class="nota boa"><span>5/5</span>depois</div>
+</div>
+  <section>
+  <h2>O que o scanner percebeu</h2>
+  <ul class="percepcoes"><li>O linter dava 5/5 já na versão anterior: o problema não era tique mecânico de IA, era o tom. Vocabulário de galeria (&quot;Arte de coleção&quot;, &quot;Obras&quot;) falando com público geek.</li>
+<li>Quatro afirmações sem base na spec tinham entrado na primeira versão: caixa com espuma recortada, versão sem pintura, &quot;esgotam rápido&quot; e &quot;antes de todo mundo&quot;. Saíram ou viraram [PROVISÓRIO].</li>
+<li>Repetições: &quot;Nenhuma sai igual à outra&quot; 2×, o detalhe de 16K 3×, &quot;estante&quot; em títulos seguidos.</li>
+<li>Estágio de consciência (Schwartz): o tráfego vem do Instagram e já viu as peças. A primeira dobra vai direto à diferença (pintura à mão + nome na base).</li>
+<li>Falso positivo do scanner: &quot;a página não pede nada&quot;. Ele procura a classe .btn, e os 6 CTAs do site são links com classes do Tailwind.</li>
+<li>Depoimentos e fotos de clientes continuam provisórios e marcados na tela. Nenhuma prova foi inventada para preencher.</li></ul>
+</section>
+  <section>
+    <h2>Cada troca, antes → depois</h2>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Obras</div>
+    <div class="depois"><span class="rotulo">depois</span>Figures</div>
+  </div>
+  <div class="motivo">Vocabulário do público: geek fala &quot;figure&quot;, não &quot;obra&quot; (termo de galeria). <code class="onde">site.json → nav[0].label</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Processo</div>
+    <div class="depois"><span class="rotulo">depois</span>Como é feita</div>
+  </div>
+  <div class="motivo">&quot;Processo&quot; é rótulo de pasta; o menu diz o que a pessoa vai ver. <code class="onde">site.json → nav[1].label</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Arte de coleção · tiragens pequenas</div>
+    <div class="depois"><span class="rotulo">depois</span>Figures de resina · feitas à mão</div>
+  </div>
+  <div class="motivo">&quot;Arte de coleção&quot; é selo de catálogo de luxo; nomear o produto como o público chama. <code class="onde">site.json → hero.eyebrow</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Cada figure sai daqui com o seu nome na base.</div>
+    <div class="depois"><span class="rotulo">depois</span>Figures pintadas à mão, com o seu nome na base.</div>
+  </div>
+  <div class="motivo">Caples: o título diz o que a pessoa ganha (a peça e o diferencial) em vez de narrar a saída da oficina. <code class="onde">site.json → hero.title</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Figures em resina 16K, pintadas à mão, peça por peça.</div>
+    <div class="depois"><span class="rotulo">depois</span>Impressas em resina 16K e pintadas no pincel, em tiragens curtas. Algumas já estão prontas pra enviar.</div>
+  </div>
+  <div class="motivo">Sugarman: a frase leva direto ao contador de peças prontas, logo abaixo, e assume o registro informal do público. <code class="onde">site.json → hero.subtitle</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Ver as obras</div>
+    <div class="depois"><span class="rotulo">depois</span>Ver as figures</div>
+  </div>
+  <div class="motivo">CTA nomeia o destino com a palavra do público. <code class="onde">site.json → hero.ctaSecondary</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>{n} peças prontas para envio</div>
+    <div class="depois"><span class="rotulo">depois</span>{n} prontas pra enviar agora</div>
+  </div>
+  <div class="motivo">Mais curto e falado; o número continua vindo do estoque real. <code class="onde">site.json → hero.readyLabel</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Mais que figures: personagens de um mundo que você pode tocar.</div>
+    <div class="depois"><span class="rotulo">depois</span>Personagens que saíram da tela e pararam na sua estante</div>
+  </div>
+  <div class="motivo">&quot;Mais que figures: …&quot; é a construção &quot;mais que X&quot;, parente do tique nº 1 do catálogo anti-genérico. <code class="onde">site.json → hero.note</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Pequenas histórias, grandes formas.</div>
+    <div class="depois"><span class="rotulo">depois</span>Feitas à mão, uma de cada vez.</div>
+  </div>
+  <div class="motivo">&quot;Pequenas histórias, grandes formas&quot; é bonito e vago (Ogilvy: serviria pra qualquer marca). Trocado por um fato. <code class="onde">site.json → brand.tagline</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Toda peça sai assinada com um &quot;Obrigado&quot; e o nome de quem vai receber.</div>
+    <div class="depois"><span class="rotulo">depois</span>Toda peça sai com um &quot;Obrigado&quot; e o nome de quem vai receber. Vale pra presente também.</div>
+  </div>
+  <div class="motivo">Inclui o presenteador, que a spec lista como público, sem prometer nada novo. <code class="onde">site.json → highlights[0].text</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Camada por camada, com pincel. Nenhuma sai igual à outra.</div>
+    <div class="depois"><span class="rotulo">depois</span>Sombra, luz e desgaste feitos no pincel, camada por camada.</div>
+  </div>
+  <div class="motivo">Tirava a repetição de &quot;nenhuma sai igual à outra&quot;, que já está no processo; troca por o que a pintura entrega. <code class="onde">site.json → highlights[1].text</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Obras</div>
+    <div class="depois"><span class="rotulo">depois</span>A estante</div>
+  </div>
+  <div class="motivo">&quot;Obras&quot; é termo de galeria; a seção vira a estante da loja. <code class="onde">site.json → gallery.eyebrow</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Escolha a sua peça</div>
+    <div class="depois"><span class="rotulo">depois</span>Qual delas é a sua?</div>
+  </div>
+  <div class="motivo">&quot;Escolha a sua peça&quot; é instrução; a pergunta puxa a escolha no tom do público. Evita &quot;estante&quot; em dois títulos seguidos. <code class="onde">site.json → gallery.title</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Pronta entrega sai em poucos dias. Sob encomenda, a gente produz a sua do zero.</div>
+    <div class="depois"><span class="rotulo">depois</span>Pronta entrega já está pintada e sai em poucos dias. Sob encomenda, a gente imprime e pinta a sua do zero.</div>
+  </div>
+  <div class="motivo">Específico sobre a diferença entre os dois fluxos (spec §3.1, item 5). <code class="onde">site.json → gallery.intro</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Ver todas as obras</div>
+    <div class="depois"><span class="rotulo">depois</span>Ver todas as figures</div>
+  </div>
+  <div class="motivo">Mesma palavra do menu e do hero. <code class="onde">site.json → gallery.emptyAction</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Processo</div>
+    <div class="depois"><span class="rotulo">depois</span>Como nasce uma figure</div>
+  </div>
+  <div class="motivo">Sobretítulo conta o que vem, em vez de rotular. <code class="onde">site.json → process.eyebrow</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Três etapas, todas feitas aqui, sem atalho.</div>
+    <div class="depois"><span class="rotulo">depois</span>Tudo feito aqui, do arquivo à caixa.</div>
+  </div>
+  <div class="motivo">&quot;Sem atalho&quot; soava forçado; o fato (tudo feito aqui) carrega a mesma ideia. <code class="onde">site.json → process.intro</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Camadas de poucos mícrons capturam cada dobra de tecido e fio de cabelo. Depois, cura UV e acabamento manual.</div>
+    <div class="depois"><span class="rotulo">depois</span>A impressora sobe a peça em camadas de poucos mícrons, por isso dobra de roupa e mecha de cabelo aparecem. Depois vem cura UV e acabamento manual: tirar suporte e lixar.</div>
+  </div>
+  <div class="motivo">Quem coleciona resina conhece suporte e cura; o detalhe técnico real conversa melhor que &quot;capturam cada dobra&quot;. <code class="onde">site.json → process.steps[0].text</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>O detalhe que a foto do feed não mostra</div>
+    <div class="depois"><span class="rotulo">depois</span>De perto, dá pra contar as costuras</div>
+  </div>
+  <div class="motivo">&quot;O detalhe que a foto do feed não mostra&quot; é fórmula (&quot;o que ninguém te mostra&quot;); o novo título é uma afirmação verificável na foto. <code class="onde">site.json → detail.title</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Resolução 16K significa textura de couro, costura e fio de cabelo visíveis a olho nu.</div>
+    <div class="depois"><span class="rotulo">depois</span>Isso aqui é zoom de verdade. É assim que a peça chega na sua mão.</div>
+  </div>
+  <div class="motivo">O texto antigo repetia pela terceira vez a frase dos 16K; agora aponta para a foto. <code class="onde">site.json → detail.intro</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Altura real: {cm} cm, do tamanho de uma garrafa de 600 ml.</div>
+    <div class="depois"><span class="rotulo">depois</span>Altura real: {cm} cm, mais ou menos a altura de uma garrafa de 600 ml.</div>
+  </div>
+  <div class="motivo">&quot;Do tamanho de&quot; dizia igual; &quot;mais ou menos&quot; é honesto (24 cm contra ~23 cm). <code class="onde">site.json → detail.scaleCaption</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>A base é sua</div>
+    <div class="depois"><span class="rotulo">depois</span>Testa o seu nome na base</div>
+  </div>
+  <div class="motivo">O título vira o convite pra interagir com o campo logo abaixo. <code class="onde">site.json → detail.baseTitle</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Toda peça leva um &quot;Obrigado&quot; e o nome de quem vai recebê-la. Digite o seu e veja como fica.</div>
+    <div class="depois"><span class="rotulo">depois</span>Toda peça leva um &quot;Obrigado&quot; e um nome. Digita o seu (ou o de quem vai ganhar) e vê como fica.</div>
+  </div>
+  <div class="motivo">Mesmo fato, em tom de conversa, e lembrando do presente. <code class="onde">site.json → detail.baseText</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Três passos até a sua estante</div>
+    <div class="depois"><span class="rotulo">depois</span>Pedir leva três passos</div>
+  </div>
+  <div class="motivo">Título afirma em vez de reutilizar &quot;estante&quot; pela quarta vez. <code class="onde">site.json → howTo.title</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Abra a obra na galeria e veja fotos, altura e prazo.</div>
+    <div class="depois"><span class="rotulo">depois</span>Abre a figure aqui na página e vê fotos, altura e prazo.</div>
+  </div>
+  <div class="motivo">&quot;Obra&quot; → &quot;figure&quot;; mesmo tom dos outros passos. <code class="onde">site.json → howTo.steps[0].text</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Sim. Toda figure sai pintada à mão. Se você prefere pintar, pergunte pela versão sem pintura.</div>
+    <div class="depois"><span class="rotulo">depois</span>Sim. Toda figure sai pintada à mão. [PROVISÓRIO: se existir versão sem pintura (garage kit), dizer aqui]</div>
+  </div>
+  <div class="motivo">Prova inventada: a versão sem pintura não está na spec. Virou pendência explícita. <code class="onde">site.json → faq.items[3].a</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Cada figure vai em caixa rígida com espuma recortada no formato da peça, e as partes finas são protegidas separadamente.</div>
+    <div class="depois"><span class="rotulo">depois</span>Vai em embalagem anti-impacto, com as partes finas protegidas à parte. [PROVISÓRIO: descrever a embalagem real]</div>
+  </div>
+  <div class="motivo">Prova inventada: &quot;caixa rígida com espuma recortada&quot; não estava na spec. Ficou só o que a spec garante. <code class="onde">site.json → faq.items[5].a</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Sua peça está a uma mensagem de distância.</div>
+    <div class="depois"><span class="rotulo">depois</span>Viu alguma que é a sua cara?</div>
+  </div>
+  <div class="motivo">&quot;A uma mensagem de distância&quot; é clichê de anúncio; a pergunta retoma a galeria. <code class="onde">site.json → finalCta.title</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Chame no WhatsApp para pedir, tirar dúvidas ou encomendar algo do seu universo favorito.</div>
+    <div class="depois"><span class="rotulo">depois</span>Chama no WhatsApp. Dá pra pedir, tirar dúvida ou perguntar por aquele personagem que ainda não está aqui.</div>
+  </div>
+  <div class="motivo">Nomeia a dor real do colecionador (o personagem que falta) sem prometer que ele vai ser feito. <code class="onde">site.json → finalCta.text</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Pedir no WhatsApp</div>
+    <div class="depois"><span class="rotulo">depois</span>Chamar no WhatsApp</div>
+  </div>
+  <div class="motivo">O CTA diz o que acontece: abre a conversa. <code class="onde">site.json → finalCta.cta</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Tiragens pequenas esgotam rápido. Deixe seu e-mail e saiba antes de todo mundo.</div>
+    <div class="depois"><span class="rotulo">depois</span>As tiragens são curtas. Deixa seu e-mail e fica sabendo quando sair peça nova.</div>
+  </div>
+  <div class="motivo">&quot;Esgotam rápido&quot; era afirmação sem prova (spec: escassez honesta). <code class="onde">site.json → notify.text</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Quero ser avisado</div>
+    <div class="depois"><span class="rotulo">depois</span>Me avisa</div>
+  </div>
+  <div class="motivo">Botão curto, na voz de quem clica. <code class="onde">site.json → notify.submit</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Pronto! Você vai saber do próximo drop antes de todo mundo.</div>
+    <div class="depois"><span class="rotulo">depois</span>Pronto! Quando sair peça nova, você fica sabendo por e-mail.</div>
+  </div>
+  <div class="motivo">&quot;Antes de todo mundo&quot; prometia uma vantagem que não está garantida. <code class="onde">site.json → notify.success</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>Seu nome na base</div>
+    <div class="depois"><span class="rotulo">depois</span>Assinada pra você</div>
+  </div>
+  <div class="motivo">Lido em sequência, &quot;Seu nome na base&quot; repetia o h1 logo acima. <code class="onde">site.json → highlights[0].title</code></div>
+</div>
+<div class="troca">
+  <div class="par">
+    <div class="antes"><span class="rotulo">antes</span>TAMAGO Figures · Arte de coleção em resina</div>
+    <div class="depois"><span class="rotulo">depois</span>TAMAGO Figures · pintadas à mão, com seu nome na base</div>
+  </div>
+  <div class="motivo">O card de compartilhamento leva o diferencial, não o selo &quot;arte de coleção&quot;. <code class="onde">index.html → og:title</code></div>
+</div>
+  </section>
+  <footer>Gerado pela skill super-copy. Nenhuma prova foi inventada nestas trocas.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "001",
+    "slug": "ronin-do-crepusculo",
+    "name": "Ronin do Crepúsculo",
+    "universe": "games",
+    "heightCm": 24,
+    "status": "disponivel",
+    "price": 690,
+    "addedAt": "2026-09-02",
+    "stock": 2,
+    "editionSize": 5,
+    "shipDays": 3,
+    "featured": true,
+    "description": "Texto provisório: uma ou duas frases sobre a pose, a pintura e o que torna esta peça especial.",
+    "images": [
+      {
+        "src": "/img/geradas/ronin-do-crepusculo",
+        "alt": "Ronin do Crepúsculo, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+        "w": 896,
+        "h": 1120
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "slug": "maga-estelar",
+    "name": "Maga Estelar",
+    "universe": "anime",
+    "heightCm": 21,
+    "status": "ultimas",
+    "price": 590,
+    "addedAt": "2026-09-10",
+    "stock": 1,
+    "editionSize": 5,
+    "shipDays": 3,
+    "featured": false,
+    "description": "Texto provisório: uma ou duas frases sobre a pose, a pintura e o que torna esta peça especial.",
+    "images": [
+      {
+        "src": "/img/geradas/maga-estelar",
+        "alt": "Maga Estelar, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+        "w": 896,
+        "h": 1120
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "slug": "cavaleiro-runico",
+    "name": "Cavaleiro Rúnico",
+    "universe": "games",
+    "heightCm": 28,
+    "status": "encomenda",
+    "price": 890,
+    "addedAt": "2026-09-18",
+    "leadTimeDays": 25,
+    "featured": true,
+    "description": "Texto provisório: uma ou duas frases sobre a pose, a pintura e o que torna esta peça especial.",
+    "images": [
+      {
+        "src": "/img/geradas/cavaleiro-runico",
+        "alt": "Cavaleiro Rúnico, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+        "w": 896,
+        "h": 1120
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "slug": "raposa-espiritual",
+    "name": "Raposa Espiritual",
+    "universe": "anime",
+    "heightCm": 16,
+    "status": "disponivel",
+    "price": 420,
+    "addedAt": "2026-09-24",
+    "stock": 3,
+    "editionSize": 6,
+    "shipDays": 2,
+    "featured": false,
+    "description": "Texto provisório: uma ou duas frases sobre a pose, a pintura e o que torna esta peça especial.",
+    "images": [
+      {
+        "src": "/img/geradas/raposa-espiritual",
+        "alt": "Raposa Espiritual, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+        "w": 896,
+        "h": 1120
+      }
+    ]
+  },
+  {
+    "id": "005",
+    "slug": "piloto-mecha",
+    "name": "Piloto Mecha",
+    "universe": "anime",
+    "heightCm": 26,
+    "status": "encomenda",
+    "price": 790,
+    "addedAt": "2026-09-29",
+    "leadTimeDays": 30,
+    "featured": false,
+    "description": "Texto provisório: uma ou duas frases sobre a pose, a pintura e o que torna esta peça especial.",
+    "images": [
+      {
+        "src": "/img/geradas/piloto-mecha",
+        "alt": "Piloto Mecha, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+        "w": 896,
+        "h": 1120
+      }
+    ]
+  },
+  {
+    "id": "006",
+    "slug": "dragao-ancestral",
+    "name": "Dragão Ancestral",
+    "universe": "autoral",
+    "heightCm": 32,
+    "status": "esgotado",
+    "price": 1190,
+    "addedAt": "2026-08-20",
+    "editionSize": 3,
+    "featured": false,
+    "description": "Texto provisório: uma ou duas frases sobre a pose, a pintura e o que torna esta peça especial.",
+    "images": [
+      {
+        "src": "/img/geradas/dragao-ancestral",
+        "alt": "Dragão Ancestral, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+        "w": 896,
+        "h": 1120
+      }
+    ]
+  },
+  {
+    "id": "007",
+    "slug": "guardia-da-floresta",
+    "name": "Guardiã da Floresta",
+    "universe": "games",
+    "heightCm": 22,
+    "status": "encomenda",
+    "price": 620,
+    "addedAt": "2026-10-01",
+    "leadTimeDays": 20,
+    "featured": false,
+    "description": "Texto provisório: uma ou duas frases sobre a pose, a pintura e o que torna esta peça especial.",
+    "images": [
+      {
+        "src": "/img/geradas/guardia-da-floresta",
+        "alt": "Guardiã da Floresta, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+        "w": 896,
+        "h": 1120
+      }
+    ]
+  },
+  {
+    "id": "008",
+    "slug": "samurai-neon",
+    "name": "Samurai Neon",
+    "universe": "autoral",
+    "heightCm": 19,
+    "status": "disponivel",
+    "price": 540,
+    "addedAt": "2026-10-04",
+    "stock": 4,
+    "editionSize": 8,
+    "shipDays": 3,
+    "featured": false,
+    "description": "Texto provisório: uma ou duas frases sobre a pose, a pintura e o que torna esta peça especial.",
+    "images": [
+      {
+        "src": "/img/geradas/samurai-neon",
+        "alt": "Samurai Neon, figure fictícia de resina em base de exposição; imagem ilustrativa gerada por IA.",
+        "w": 896,
+        "h": 1120
+      }
+    ]
+  }
+]

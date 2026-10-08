@@ -1,0 +1,57 @@
+# TAMAGO · Hostinger (Apache/LiteSpeed) — spec §5.1
+# Copiado para dist/ no build. Vai na raiz do public_html junto com o index.html.
+
+Options -Indexes
+DirectoryIndex index.html
+
+# Loja: cada página é uma pasta com index.html (/figures/<slug>/). Link quebrado → 404 da marca.
+ErrorDocument 404 /404.html
+
+# --- HTTPS obrigatório (ativar o SSL no hPanel antes) ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  # Sem "www" (troque a ordem se o domínio oficial for com www)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- Cabeçalhos de segurança ---
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "DENY"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+  # CSP restritiva: só o próprio site + analytics + serviço do formulário de drops.
+  # Ao trocar de analytics (Plausible/GA4) ou de serviço de formulário, ajuste aqui.
+  # 'unsafe-inline' em style-src: GSAP e o <model-viewer> escrevem estilos inline.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://plausible.io https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.google-analytics.com; font-src 'self'; media-src 'self'; connect-src 'self' https://plausible.io https://*.google-analytics.com https://*.analytics.google.com https://formspree.io https://api.web3forms.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+
+  # Cache: arquivos com hash no nome nunca mudam; imagens por 30 dias; HTML sempre revalida
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(avif|webp|jpg|png|svg|glb|mp4|webm)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# --- Tipos que alguns servidores ainda não conhecem ---
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType model/gltf-binary .glb
+</IfModule>
+
+# --- Compressão ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml model/gltf-binary
+</IfModule>
